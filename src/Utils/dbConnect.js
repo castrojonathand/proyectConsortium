@@ -7,7 +7,7 @@ const conn = {
 export async function connectDB(){    
     if(conn.isConnected) return
     const db = await connect('mongodb+srv://castrojonathan:3485747321Qr@cluster0.j6tgbwk.mongodb.net/')
-    console.log(db.connection.db.databaseName)
+    console.log("Nombre Base de Datos: ",db.connection.db.databaseName)
     conn.isConnected = db.connections[0].readyState
 }
 connection.on('connected', ()=>{
@@ -15,6 +15,6 @@ connection.on('connected', ()=>{
 })
 
 connection.on('error',(err)=>{
-    console.log('mongoose connection error',err);
+    console.log('mongoose connection error');
 });
 
