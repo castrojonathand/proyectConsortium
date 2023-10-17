@@ -1,6 +1,6 @@
 import {NextResponse} from 'next/server'
 import {connectDB} from '@/Utils/dbConnect'
-import edificios from '@/Utils/edificios'
+import edificios from '@/Models/edificios.js'
 
 export async function GET(){  
 
@@ -13,13 +13,20 @@ export async function POST(request){
 
     try {
         const data = await request.json()
-        
+        console.log(data)
+        const newEdificio = new edificios({
+            name: data.name,
+            cuit: data.cuit,
+            keySUTERH: data.keySUTERH,
+        });
+        console.log(newEdificio)
+        // const saveEdificio = await newEdificio.save()
+        // console.log(saveEdificio)
+        return NextResponse.json(newEdificio)
         
         
     } catch (error) {
+        return NextResponse.error(error.message, {status: 400})
         
     }
-
-
-    return NextResponse.json({ message:"it is a POST request" })
 }
