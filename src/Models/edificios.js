@@ -18,7 +18,9 @@ const edificioSchema = new Schema({
         required: true,
         unique: true,
         trim: true,
-    },
+    }
+},  {
+    timestamps: true,
 });
 
 export default models.edificios || model('edificios', edificioSchema);

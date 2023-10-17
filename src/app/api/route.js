@@ -13,20 +13,19 @@ export async function POST(request){
 
     try {
         const data = await request.json()
-        console.log(data)
+        console.log("data>>>",data)
         const newEdificio = new edificios({
             name: data.name,
             cuit: data.cuit,
             keySUTERH: data.keySUTERH,
         });
-        console.log(newEdificio)
+        console.log("newEdificio>>>",newEdificio)
         // const saveEdificio = await newEdificio.save()
         // console.log(saveEdificio)
         return NextResponse.json(newEdificio)
         
         
     } catch (error) {
-        return NextResponse.error(error.message, {status: 400})
-        
+        return NextResponse.error(error.message, {status: 400})        
     }
 }
