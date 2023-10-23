@@ -3,8 +3,8 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div>
-            <ul className="hidden lg:flex items-center gap-12 font-poppins">
+        <div className='text-white flex justify-center text-center gap-2'>
+            <ul className="lg:flex items-center gap-12 font-poppins">
                 <li className="text-lg link-item">
                     <Link href="/inicio">Inicio</Link>
                 </li>
