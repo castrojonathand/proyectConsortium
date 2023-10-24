@@ -1,6 +1,6 @@
 function HomePage() {
   return (
-    <div>Hola DIVS</div>
+    <div>Hola Home</div>
   )
 }
 export default HomePage
