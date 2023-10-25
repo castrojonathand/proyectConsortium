@@ -5,6 +5,7 @@ import Edificios from '@/Models/Edificios'
 connectDB()
 
 export async function GET(){      
+    console.log("GET")
     const edif = await Edificios.find()
     return NextResponse.json(edif)
 }
