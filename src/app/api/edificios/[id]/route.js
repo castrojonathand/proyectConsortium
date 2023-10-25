@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "@/Utils/dbConnect";
+// import { connectDB } from "@/Utils/dbConnect";
 
-connectDB();
+// connectDB();
 
 export async function GET({ params }) {
-    const { id } = params;
+    const id  = params.id;
 
     if (!id) {
         return NextResponse.error('Parámetro "id" no encontrado', { status: 400 });
@@ -15,11 +15,3 @@ export async function GET({ params }) {
 
 
 
-// export function GET( {params} ) {
-    
-//     console.log(params.id);
-//     // const id = params.id;
-//     // const edificioId= params.id
-//     // const edif = await Edificios.findById(edificioId);
-//     return NextResponse.json({message: `GET ${params.id}`});
-// }
