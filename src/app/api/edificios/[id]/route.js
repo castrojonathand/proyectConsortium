@@ -1,13 +1,14 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/Utils/dbConnect";
-import Edificios from "@/Models/Edificios";
+// import Edificios from "@/Models/Edificios";
 
 connectDB();
 
-export async function GET({params}) {
+export function GET(params) {
     
     console.log(params.id);
-    const edificioId= params.id
-    const edif = await Edificios.findById(edificioId);
-    return NextResponse.json(edif);
+    const id = params.id;
+    // const edificioId= params.id
+    // const edif = await Edificios.findById(edificioId);
+    return NextResponse.json({message: `GET ${params.id}`});
 }
