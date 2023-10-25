@@ -22,10 +22,31 @@ export async function GET(request,{ params }) {
         return NextResponse.json({
             message: `Error al obtener el edificio`
         },{
-            status : 500
+            status : 400
         })
         
     }
+}
+
+export async function PUT(request,{ params }) {
+
+    try {
+        const newEdificio = await request.json();
+        console.log(newEdificio)
+        const edificioUpdated = await Edificios.findByIdAndUpdate(params.id,newEdificio, { 
+            new:true
+        })
+    
+        return NextResponse.json(edificioUpdated)
+        
+    } catch (error) {
+        return NextResponse.json(error.message,{status:400})        
+    }
+}
+
+export async function DELETE(request,{ params }) {
+
+    
 }
 
 
