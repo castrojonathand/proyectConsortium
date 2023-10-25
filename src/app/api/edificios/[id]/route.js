@@ -4,7 +4,7 @@ import Edificios from "@/Models/Edificios";
 
 connectDB();
 
-export async function GET(params) {
+export async function GET({params}) {
     
     console.log(params.id);
     const edificioId= params.id
