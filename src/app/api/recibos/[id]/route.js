@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
-// import { connectDB } from "@/Utils/dbConnect";
-
-// connectDB();
 
 export async function GET({ params }) {
+
     const id  = params.id;
 
     // if (!id) {
@@ -12,6 +10,3 @@ export async function GET({ params }) {
 
     return NextResponse.json({ message: `GET ${id}` });
 }
-
-
-
