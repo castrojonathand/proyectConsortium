@@ -10,5 +10,5 @@ export function GET(params) {
     const id = params.id;
     // const edificioId= params.id
     // const edif = await Edificios.findById(edificioId);
-    return NextResponse.json({message: `GET ${params.id}`});
+    return NextResponse.json({message: `GET ${params.id}`}); 
 }
