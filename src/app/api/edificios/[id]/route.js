@@ -46,7 +46,16 @@ export async function PUT(request,{ params }) {
 
 export async function DELETE(request,{ params }) {
 
-    
+    try {
+        const edificioDeleted = await Edificios.findByIdAndDelete(params.id)
+        console.log("Eliminando edificio...")
+        console.log(edificioDeleted)
+        return NextResponse.json(edificioDeleted)
+        
+    } catch (error) {
+        return NextResponse.json(error.message,{status:400})        
+    }
+
 }
 
 
