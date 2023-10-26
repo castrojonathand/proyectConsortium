@@ -36,11 +36,18 @@ export async function PUT(request,{ params }) {
         const edificioUpdated = await Edificios.findByIdAndUpdate(params.id,newEdificio, { 
             new:true
         })
+        if (!edificioUpdated) {
+            return NextResponse.json({
+                message: `Edificio no encontrado`
+            },{
+                status : 404
+            }) 
+        }  
     
         return NextResponse.json(edificioUpdated)
         
     } catch (error) {
-        return NextResponse.json(error.message,{status:400})        
+        return NextResponse.json({message:"Error al actualizar edificio"},{status:400})        
     }
 }
 
@@ -48,12 +55,18 @@ export async function DELETE(request,{ params }) {
 
     try {
         const edificioDeleted = await Edificios.findByIdAndDelete(params.id)
+        if (!edificioDeleted) 
+            return NextResponse.json({
+                message: "edificio no encontrado"
+            },{
+                status:404
+            })
         console.log("Eliminando edificio...")
         console.log(edificioDeleted)
-        return NextResponse.json(edificioDeleted)
+        return NextResponse.json({message:`Edificio borrado...`,edificioDeleted})
         
     } catch (error) {
-        return NextResponse.json(error.message,{status:400})        
+        return NextResponse.json({message:"Error al borrar edificio"},{status:400})        
     }
 
 }
