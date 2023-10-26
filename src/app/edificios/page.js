@@ -4,7 +4,7 @@ import Card from '@/Components/Card'
 const Edificios = () => {
     return (
         <>
-            <div>Page Edificios</div>
+            <div className='text-black'>Edificios</div>
             <Card/>        
         </>
     )
