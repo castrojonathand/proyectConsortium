@@ -23,18 +23,16 @@ const Card = () => {
     
 
     return (
-        <div className='bg-[#F4F4F4] mt-6 text-black'>
+        <div className="text-black w-3/4 gap-3 flex text-center font-poppins mx-auto mt-4">          
             {
-                edificios.map((edificio) => (
-                    <p>
-                        {edificio.name}
-                    </p>
+                edificios.map((edificio) => (                    
+                    <div className="w-1/3 bg-white rounded-2xl hover:shadow-md"key={edificio.id}>                                
+                        <p className='p-2'>
+                            {edificio.name}
+                        </p>                    
+                    </div>
                 ))
-
-            }
-            <p>
-                        
-            </p>
+            }               
         </div>
     )
 }
