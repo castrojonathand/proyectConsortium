@@ -1,13 +1,12 @@
 import React from 'react'
-import Card from '@/Components/Card'
+import CardList from '@/Components/CardList'
 
 const Edificios = () => {
     return (
         <>
             <div>Edificios</div>
-            <Card/>        
+            <CardList/>        
         </>
     )
 }
-
 export default Edificios
