@@ -1,6 +1,12 @@
 import { Schema, models, model } from "mongoose";
 
 const edificioSchema = new Schema({
+    month: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
     name: {
         type: String,
         required: true,
