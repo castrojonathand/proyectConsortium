@@ -22,7 +22,7 @@ const CardList = () => {
     console.log("edificios>>>",edificios)
 
     return (
-        <div className="text-black w-3/4 gap-4 flex flex-wrap text-center font-poppins mx-auto mt-4">          
+        <div className="text-black w-3/4 gap-4 flex flex-wrap justify-evenly text-center font-poppins mx-auto mt-4">          
             {
                 edificios.map((edificio,index) => (                    
                     <Card edificios={edificio} key={index}/>

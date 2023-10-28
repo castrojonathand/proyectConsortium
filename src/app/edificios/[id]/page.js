@@ -21,10 +21,10 @@ const Edificio = ({params}) => {
 
     return (
         <>
-            
+
             <div>Ingresaste al Edificio con el id: {params.id}</div>
             <h1>Mes:  {edificio.month}</h1>
-            <p>Edificio:  {edificio.name}</p> 
+            <p>Edificio:  {edificio.name}</p>
             <p>CUIT:  {edificio.cuit}</p>
             <p>claveSUTERH:  {edificio.keySUTERH}</p>         
         
