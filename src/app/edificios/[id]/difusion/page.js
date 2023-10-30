@@ -1,9 +1,13 @@
 import React from 'react'
+import ReadExcel from '@/Components/ReadExcel'
 
 const Difusion = () => {
-    return (
-        
-        <div>Hola Difusion</div>
+    return (        
+        <>
+            <div>Hola Difusion</div>
+            <ReadExcel />        
+        </>
+
     )
 }
 
