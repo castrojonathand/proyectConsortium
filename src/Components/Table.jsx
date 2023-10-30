@@ -13,10 +13,7 @@ const Table = ({ data }) => {
                 <thead className="bg-gray-800 text-white">
                 <tr>
                     {headers.map((header, index) => (
-                    <th
-                        key={index}
-                        className="px-4 py-2 text-left"
-                    >
+                    <th key={index} className="px-4 py-2 text-left">
                         {header}
                     </th>
                     ))}
@@ -26,10 +23,7 @@ const Table = ({ data }) => {
                 {data.map((item, rowIndex) => (
                     <tr key={rowIndex}>
                     {headers.map((header, columnIndex) => (
-                        <td
-                        key={columnIndex}
-                        className="px-4 py-2 border-b border-gray-300"
-                        >
+                        <td key={columnIndex} className="px-4 py-2 border-b border-gray-300">
                         {item[header]}
                         </td>
                     ))}
@@ -37,9 +31,7 @@ const Table = ({ data }) => {
                 ))}
                 </tbody>
             </table>
-</div>
-
-        
+        </div>        
     );
 };
 
