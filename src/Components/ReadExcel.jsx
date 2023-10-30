@@ -2,6 +2,7 @@
 import React from 'react'
 import * as XLSX from 'xlsx';
 import { useState } from 'react';
+import Table from './Table';
 
 const ReadExcel = () => {
 
@@ -33,6 +34,9 @@ const ReadExcel = () => {
     return (
         <div className='mt-4'>
             <input type="file" onChange={handleFileChange}/>
+            <Table data={excelFile}/>
+
+
         </div>
     )
 }
