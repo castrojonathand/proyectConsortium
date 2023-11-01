@@ -1,6 +1,5 @@
 import React from 'react'
 import ReadExcel from '@/Components/ReadExcel'
-import { readXlsxFile } from 'read-excel-file'
 
 const Difusion = () => {
     return (        
@@ -10,9 +9,7 @@ const Difusion = () => {
                 <button className="btn btn-primary bg-[#4F81BD] p-2 text-white rounded-md">Cargar Datos</button>
             </div>     
             <ReadExcel />   
-        </>
-
+        </>    
     )
 }
-
 export default Difusion
