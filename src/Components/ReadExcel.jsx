@@ -7,7 +7,7 @@ import Table from './Table';
 
 const ReadExcel = () => {
 
-    const [excelFile,setExcelFile] = useState(null)
+    const [excelData,setExcelData] = useState(null)
 
     const handleFileChange = async (event) => {
         const file = event.target.files[0];
@@ -23,7 +23,7 @@ const ReadExcel = () => {
                     
                 const jsonData = XLSX.utils.sheet_to_json(worksheet);  
                     
-                setExcelFile(jsonData)
+                setExcelData(jsonData)
             };
             
             
@@ -32,12 +32,12 @@ const ReadExcel = () => {
         } 
         
     }
-    console.log("ExcelFile>>",excelFile)
+    console.log("ExcelFile>>",excelData)
 
     return (
         <div className='mt-4'>
             <input type="file" onChange={handleFileChange}/>
-            <Table data={excelFile}/>
+            <Table data={excelData}/>
 
 
         </div>

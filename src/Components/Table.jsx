@@ -8,7 +8,7 @@ const Table = ({ data }) => {
     const headers = Object.keys(data[0]);
 
     return (
-        <div className="overflow-x-auto mt-2">
+        <div className="overflow-x-auto m-4">
             <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
                 <thead className="bg-gray-800 text-white">
                 <tr>
