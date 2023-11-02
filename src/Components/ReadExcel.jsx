@@ -39,7 +39,6 @@ const ReadExcel = () => {
             <input type="file" onChange={handleFileChange}/>
             <Table data={excelData}/>
 
-
         </div>
     )
 }
