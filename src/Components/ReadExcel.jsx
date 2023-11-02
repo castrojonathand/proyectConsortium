@@ -3,6 +3,8 @@ import React from 'react'
 import * as XLSX from 'xlsx';
 import { useState } from 'react';
 import Table from './Table';
+import { jsPDF } from "jspdf";
+
 
 
 const ReadExcel = () => {
@@ -32,14 +34,30 @@ const ReadExcel = () => {
         } 
         
     }
+    const crearPDF = () => {
+        const doc = new jsPDF();
+        doc.text("Hello world!", 10, 10);
+        doc.save("a4.pdf");
+
+    }
+    const handleClick = () => {
+        crearPDF()
+    }
+
     console.log("ExcelFile>>",excelData)
 
     return (
-        <div className='mt-4'>
-            <input type="file" onChange={handleFileChange}/>
-            <Table data={excelData}/>
-
-        </div>
+        <>  
+            <div className='m-4'>
+                <button className="btn btn-primary bg-[#4F81BD] p-2 text-white rounded-md" onClick={handleClick}>
+                    Generar PDF
+                </button>
+                <div className='mt-4'>
+                    <input type="file" onChange={handleFileChange}/>
+                    <Table data={excelData}/>
+                </div>                
+            </div>      
+        </>
     )
 }
 export default ReadExcel
