@@ -6,8 +6,6 @@ import Table from './Table';
 import { jsPDF } from "jspdf";
 import autoTable from 'jspdf-autotable';
 
-
-
 const ReadExcel = () => {
 
     const [excelData,setExcelData] = useState(null)
@@ -31,14 +29,7 @@ const ReadExcel = () => {
         reader.readAsBinaryString(file);
         }         
     }
-    const crearPDF = () => {
-        // const headers = Object.keys(excelData[0]);
-        
-        // const body = excelData.map((item) => Object.values(item));
-
-        // console.log("body>>",body)
-
-        // console.log("headers>>",headers)
+    const crearPDF = () => {  
 
         const doc = new jsPDF();
 
@@ -46,24 +37,15 @@ const ReadExcel = () => {
             doc,
             {   
                 html: '#table',
+                theme: 'grid',
                 columnStyles: {
-                0: { cellWidth: 10 }, 
-                1: { cellWidth: 15 }, 
+                0: { cellWidth: 8 }, 
+                1: { cellWidth: 12 }, 
+                2: { cellWidth: 25 },
                 }, 
             },
             
         )
-
-        // doc.autoTable({
-        //     startY: 20,   
-        //     theme: 'grid',
-        //     head: [headers],
-        //     body: body,
-        //     columnStyles: {
-        //     cellWidth:'auto',
-        //     tableWidth: 'auto'
-        //     }                                
-        // })
         doc.save("export.pdf");
 
     }
