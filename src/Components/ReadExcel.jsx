@@ -4,7 +4,7 @@ import * as XLSX from 'xlsx';
 import { useState } from 'react';
 import Table from './Table';
 import { jsPDF } from "jspdf";
-import 'jspdf-autotable'
+import autoTable from 'jspdf-autotable';
 
 
 
@@ -32,25 +32,38 @@ const ReadExcel = () => {
         }         
     }
     const crearPDF = () => {
-        const headers = Object.keys(excelData[0]);
-        const body = excelData.map((item) => Object.values(item));
+        // const headers = Object.keys(excelData[0]);
+        
+        // const body = excelData.map((item) => Object.values(item));
 
-        console.log("body>>",body)
+        // console.log("body>>",body)
 
-        console.log("headers>>",headers)
+        // console.log("headers>>",headers)
 
         const doc = new jsPDF();
-        doc.autoTable({
-            startY: 20,   
-            headStyles: { fillColor: [100, 100, 100] },         
-            head: [headers],
-            body: body,
-            columnStyles: {
-            0: { cellWidth: 10 }, // Ajusta el ancho de la primera columna
-            1: { cellWidth: 10 }, // Ajusta el ancho de la segunda columna
-            // Puedes ajustar más columnas si es necesario
-            },                       
-        })
+
+        autoTable(
+            doc,
+            {   
+                html: '#table',
+                columnStyles: {
+                0: { cellWidth: 10 }, 
+                1: { cellWidth: 15 }, 
+                }, 
+            },
+            
+        )
+
+        // doc.autoTable({
+        //     startY: 20,   
+        //     theme: 'grid',
+        //     head: [headers],
+        //     body: body,
+        //     columnStyles: {
+        //     cellWidth:'auto',
+        //     tableWidth: 'auto'
+        //     }                                
+        // })
         doc.save("export.pdf");
 
     }

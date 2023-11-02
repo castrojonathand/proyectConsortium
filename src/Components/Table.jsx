@@ -9,7 +9,7 @@ const Table = ({ data }) => {
 
     return (                          
                 <div className="overflow-x-auto m-4">
-                    <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                    <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden" id='table'>
                         <thead className="bg-gray-800 text-white">
                         <tr>
                             {headers.map((header, index) => (
