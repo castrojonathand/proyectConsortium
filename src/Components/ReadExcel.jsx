@@ -33,9 +33,12 @@ const ReadExcel = () => {
 
         const doc = new jsPDF();
 
+        doc.text("Reporte de datos", 14, 15);
+
         autoTable(
             doc,
             {   
+                startY: 20,
                 html: '#table',
                 theme: 'grid',
                 columnStyles: {
