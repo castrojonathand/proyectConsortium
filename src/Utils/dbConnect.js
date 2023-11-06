@@ -6,10 +6,16 @@ const conn = {
 
 export async function connectDB(){    
     if(conn.isConnected) return
-    const db = await connect('mongodb+srv://castrojonathan:3485747321Qr@cluster0.j6tgbwk.mongodb.net/')
-    console.log("Nombre Base de Datos: ",db.connection.db.databaseName)
-    conn.isConnected = db.connections[0].readyState
+    try {
+        const db = await connect('mongodb+srv://castrojonathan:3485747321Qr@cluster0.j6tgbwk.mongodb.net/')
+        console.log("Nombre Base de Datos: ",db.connection.db.databaseName)
+        conn.isConnected = db.connections[0].readyState
+    return conn
+    } catch (error) {
+        return console.log(error)        
+    }
 }
+
 connection.on('connected', ()=>{
     console.log('mongoose connection established')
 })
