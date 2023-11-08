@@ -16,11 +16,15 @@ export async function POST(request){
         await transporter.sendMail({
             from:"mensaje enviado por <>",
             to:Gmail,
-            subject:"Prueba de envio de mail desde el servidor4",
-            text:`Hola ${name}, este es un mensaje de prueba enviado desde el servidor de nextjs`
+            subject:"Prueba de envio CV adjunto",
+            text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
+            atachments:[{
+                filename:"CV-Castro-Jonathan-Junior-FullStack.pdf",
+                path:"@/Assets\CV-Castro-Jonathan-Junior-FullStack.pdf"
+            }]
         }) 
         console.log("envio exitoso")
-        return NextResponse,json('envio exitoso')
+        return NextResponse.json('envio exitoso')
         
     } catch (error) {
         console.log("error>>>",error)
