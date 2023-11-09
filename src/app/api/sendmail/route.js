@@ -18,9 +18,11 @@ export async function POST(request){
             to:Gmail,
             subject:"Prueba de envio CV adjunto",
             text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
-            atachments:[{
+            attachments:[{
                 filename:"CV-Castro-Jonathan-Junior-FullStack.pdf",
-                path:"@/Assets\CV-Castro-Jonathan-Junior-FullStack.pdf"
+                path: "./Assets/CV-Castro-Jonathan-Junior-FullStack.pdf"
+
+                
             }]
         }) 
         console.log("envio exitoso")
