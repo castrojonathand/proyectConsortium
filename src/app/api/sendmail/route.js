@@ -13,19 +13,16 @@ export async function POST(request){
         if(!name || !Gmail){
             return NextResponse.json({message:"Faltan datos"})
         }
-        await transporter.sendMail({
+        const response = await transporter.sendMail({
             from:"mensaje enviado por <>",
             to:Gmail,
             subject:"Prueba de envio CV adjunto",
             text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
-            attachments:[{
-                filename:"CV-Castro-Jonathan-Junior-FullStack.pdf",
-                path: "./Assets/CV-Castro-Jonathan-Junior-FullStack.pdf"
-
-                
-            }]
-        }) 
-        console.log("envio exitoso")
+            attachments:{                
+                path: '@/Files/cv.pdf'                
+            },
+        })
+        console.log("envio exitoso",response)
         return NextResponse.json('envio exitoso')
         
     } catch (error) {
