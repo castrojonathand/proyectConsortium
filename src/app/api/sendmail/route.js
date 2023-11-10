@@ -4,7 +4,7 @@ import {connectDB} from '@/Utils/dbConnect'
 
 connectDB()
 
-export async function POST(request){ 
+export async function POST(request){
     console.log("POST")
     const {name,Gmail} = await request.json()  
     console.log("name>>>",name)
@@ -18,8 +18,8 @@ export async function POST(request){
             to:Gmail,
             subject:"Prueba de envio CV adjunto",
             text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
-            attachments:{                
-                path: '@/Files/cv.pdf'                
+            attachments:{                          
+                path: 'C:/Users/jony/Desktop/Kaba/consortium/Files/CV.pdf'                
             },
         })
         console.log("envio exitoso",response)
