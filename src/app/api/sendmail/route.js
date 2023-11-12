@@ -18,11 +18,11 @@ export async function POST(request){
             text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
             attachments:{                          
                 path: 'C:/Users/jony/Desktop/Kaba/consortium/Files/CV.pdf',
-                href: "https://drive.google.com/file/d/1GsrPR7Mexes2Z1JKDXsUjj_Kq2irWvtV/view?usp=sharing"                   
+                // href: "https://drive.google.com/file/d/1GsrPR7Mexes2Z1JKDXsUjj_Kq2irWvtV/view?usp=sharing"                   
             },
         })
         console.log("envio exitoso",response)
-        return NextResponse.json('envio exitoso')
+        return NextResponse.json('successful shipment')
         
     } catch (error) {
         console.log("error>>>",error)
