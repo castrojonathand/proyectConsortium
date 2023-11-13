@@ -16,8 +16,8 @@ export async function POST(request){
             to:Gmail,
             subject:"Prueba de envio CV adjunto",
             text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
-            attachments:{                          
-                path: 'C:/Users/jony/Desktop/Kaba/consortium/Files/CV.pdf',
+            attachments:{
+                path: 'C:/Users/jony/Desktop/Kaba/consortium/src/Assets/cv.pdf',
                 // href: "https://drive.google.com/file/d/1GsrPR7Mexes2Z1JKDXsUjj_Kq2irWvtV/view?usp=sharing"                   
             },
         })
