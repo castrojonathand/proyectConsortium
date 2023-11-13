@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-
-export async function GET({ params }) {
+export function GET({ params }) {
 
     const id  = params.id;
 

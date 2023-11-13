@@ -1,7 +1,5 @@
 import {transporter} from '@/Utils/sendEmails';
 import { NextResponse } from 'next/server';
-// import {connectDB} from '@/Utils/dbConnect'
-// connectDB()
 
 export async function POST(request){
     const {name,Gmail} = await request.json()  
