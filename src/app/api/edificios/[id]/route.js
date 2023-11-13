@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-
-import Edificios from "@/Models/Edificios";
+import Edificios from "@/models/Edificios";
 
 export async function GET(request,{ params }) {
 

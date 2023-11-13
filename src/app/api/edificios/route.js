@@ -1,5 +1,8 @@
 import {NextResponse} from 'next/server'
-import Edificios from '@/Models/Edificios'
+import Edificios from '@/models/Edificios'
+import {connectDB} from '@/utils/dbConnect'
+
+connectDB()
 
 export async function GET(){      
     console.log("Obteniendo todos los edificios...")

@@ -1,10 +1,17 @@
-import {transporter} from '@/Utils/sendEmails';
+import {transporter, mailOptions} from '@/utils/sendEmails';
 import { NextResponse } from 'next/server';
+import { promises as fs } from 'fs';
 
 export async function POST(request){
     const {name,Gmail} = await request.json()  
     console.log("name>>>",name)
     console.log("Gmail>>>",Gmail)
+    console.log("mailOptions>>>",mailOptions)
+    // await fs.writeFile('./promesas.txt', 'Hola mundo con promesas')
+    // await fs.appendFile('./promesas.txt', 'Como estas??')
+    // const response = await fs.readFile('./promesas.txt', 'utf-8')
+    // console.log("response>>>",response)
+    await fs.unlink('./promesas.txt')
     try {
         if(!name || !Gmail){
             return NextResponse.json({message:"Faltan datos"})
