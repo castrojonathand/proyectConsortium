@@ -6,7 +6,7 @@ export async function POST(request){
     const {name,Gmail} = await request.json()  
     console.log("name>>>",name)
     console.log("Gmail>>>",Gmail)
-    console.log("mailOptions>>>",mailOptions)
+    // console.log("mailOptions>>>",mailOptions)
     // await fs.writeFile('./promesas.txt', 'Hola mundo con promesas')
     // await fs.appendFile('./promesas.txt', 'Como estas??')
     // const response = await fs.readFile('./promesas.txt', 'utf-8')

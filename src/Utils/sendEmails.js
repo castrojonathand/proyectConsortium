@@ -21,7 +21,7 @@ transporter.verify(function (error, success) {
         console.log("Server is ready to take our messages",success);
     }
 });
-module.exports = {transporter , mailOptions};
+module.exports = {transporter};
 
 
 // const mailOptions = {

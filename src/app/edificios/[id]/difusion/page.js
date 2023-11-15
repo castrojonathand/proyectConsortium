@@ -20,10 +20,10 @@ const Difusion = () => {
         <>
             <div className="flex justify-between p-2 text-center">            
                 <div className='p-2'>Difusion</div>                
-                <button className="btn btn-primary bg-[#4F81BD] p-2 text-white rounded-md" >Exportar a PDF</button>
-                <button className="btn btn-primary bg-[#4F81BD] p-2 text-white rounded-md" onClick={()=> sendEmails()}>Enviar mails</button>
+                {/* <button className="btn btn-primary bg-[#4F81BD] p-2 text-white rounded-md" >Exportar a PDF</button> */}
+                <button className="btn btn-primary bg-[#4F81BD] p-2 mx-4 text-white rounded-md" onClick={()=> sendEmails()}>Enviar mails</button>
             </div>     
-            <ReadExcel/>
+            <ReadExcel />
         </>    
     )
 }

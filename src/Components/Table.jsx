@@ -30,6 +30,11 @@ const Table = ({ data }) => {
                             </tr>
                         ))}
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Footer</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>          
     );
