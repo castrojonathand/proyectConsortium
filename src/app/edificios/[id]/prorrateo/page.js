@@ -1,8 +1,12 @@
+import Rubros from '@/components/Rubros'
 import React from 'react'
 
 const Prorrateo = () => {
   return (
-    <div>Prorrateo</div>
+    <>
+      <div>Prorrateo</div>
+      <Rubros/>    
+    </>
   )
 }
 

@@ -6,6 +6,9 @@ const Rubros = () => {
         <table>
             <thead>
                 <tr>
+                    <th colSpan="4">Rubros</th>
+                </tr>
+                <tr>
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
@@ -20,7 +23,7 @@ const Rubros = () => {
                     <td>Estado</td>
                 </tr>
             </tbody>
-            
+
         </table>
     </div>
   )
