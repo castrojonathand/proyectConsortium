@@ -45,7 +45,7 @@ const ReadExcel = () => {
                 0: { cellWidth: 8 }, 
                 1: { cellWidth: 12 }, 
                 2: { cellWidth: 25 },
-                }, 
+                },
             },
             
         )

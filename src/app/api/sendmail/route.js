@@ -11,7 +11,7 @@ export async function POST(request){
     // await fs.appendFile('./promesas.txt', 'Como estas??')
     // const response = await fs.readFile('./promesas.txt', 'utf-8')
     // console.log("response>>>",response)
-    await fs.unlink('./promesas.txt')
+    // await fs.unlink('./promesas.txt')
     try {
         if(!name || !Gmail){
             return NextResponse.json({message:"Faltan datos"})
