@@ -13,19 +13,6 @@ const transporter = createTransport(
     },
 }));
 
-const mailOptions = {
-    from: 'castrojonathand@gmail.com',
-    to: 'castrojonathand1989@gmail.com',
-    subject: 'Prueba de envio CV adjunto',
-    text: 'Hola Jonathan, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs',
-    attachments: [
-        {
-            filename: 'cv.pdf',
-            path: 'C:/Users/jony/Desktop/Kaba/consortium/src/Assets/cv.pdf',
-            contentType: 'application/pdf'
-        },
-    ]
-};
 
 transporter.verify(function (error, success) {
     if (error) {
@@ -34,5 +21,19 @@ transporter.verify(function (error, success) {
         console.log("Server is ready to take our messages",success);
     }
 });
-
 module.exports = {transporter , mailOptions};
+
+
+// const mailOptions = {
+//     from: 'castrojonathand@gmail.com',
+//     to: 'castrojonathand1989@gmail.com',
+//     subject: 'Prueba de envio CV adjunto',
+//     text: 'Hola Jonathan, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs',
+//     attachments: [
+//         {
+//             filename: 'cv.pdf',
+//             path: 'C:/Users/jony/Desktop/Kaba/consortium/src/Assets/cv.pdf',
+//             contentType: 'application/pdf'
+//         },
+//     ]
+// };
