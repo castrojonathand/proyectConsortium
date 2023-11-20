@@ -5,5 +5,4 @@ const Pendientes = () => {
         <div>Page Pendientes</div>
     )
 }
-
 export default Pendientes

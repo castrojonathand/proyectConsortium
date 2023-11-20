@@ -5,5 +5,4 @@ const Balances = () => {
     <div>Page Balances</div>
   )
 }
-
 export default Balances
