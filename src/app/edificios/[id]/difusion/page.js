@@ -1,20 +1,27 @@
-"use client"
+
 import React from 'react'
 import ReadExcel from '@/components/ReadExcel'
-import axios from 'axios'
+// import axios from 'axios'
+import useSWR from 'swr'
 
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 const Difusion = () => {
 
+    const { data, error , isLoading} = useSWR('/api/sendmail', fetcher)
     const sendEmails = async () => {
-        await axios.post('http://localhost:3000/api/sendmail',{
-            name:"Joni",
-            Gmail:"castrojonathand1989@gmail.com",
-        })
-        .then(res => {
-            console.log("res>>>",res)            
-        }).catch(err => {
-            console.log("err>>>",err)
-        })
+    
+        console.log(data)
+        console.log(error)
+        console.log(isLoading)
+        // await axios.post('/api/sendmail',{
+        //     name:"Joni",
+        //     Gmail:"castrojonathand1989@gmail.com",
+        // })
+        // .then(res => {
+        //     console.log("res>>>",res)            
+        // }).catch(err => {
+        //     console.log("err>>>",err)
+        // })
     }
     return (       
         <>
