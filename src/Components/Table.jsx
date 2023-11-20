@@ -1,5 +1,4 @@
 import React from 'react';
-import { Document, Page, Text, View } from '@react-pdf/renderer';
 
 const Table = ({ data }) => {
     if (!data || data.length === 0) {
@@ -29,12 +28,7 @@ const Table = ({ data }) => {
                             ))}
                             </tr>
                         ))}
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>Footer</td>
-                            </tr>
-                        </tfoot>
+                        </tbody>                        
                     </table>
                 </div>          
     );
