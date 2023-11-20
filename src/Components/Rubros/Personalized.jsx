@@ -1,63 +1,63 @@
 import React from 'react'
 
 const Personalized = () => {
-  return (
-    <div className='mx-auto w-3/4 text-center bg-gray-200 p-4 '>
-        <section className='flex justify-around w-3/4 mx-auto text-left'>
-            <p>Propietario:</p>
-            <p>UF:</p>
-            <p>Dpto:</p>            
-        </section>
-        <section className=''>            
-            <table className='w-full '>
-                <thead className='text-left'>
-                    <tr>
-                        <th>Conceptos a pagar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className='text-left'>Saldo anterior</td>
-                        <td>Valor</td>
-                    </tr>  
-                    <tr>
-                        <td className='text-left'>Pago</td>
-                        <td>Valor</td>
-                    </tr> 
-                    <tr>
-                        <td className='text-left'>Deuda</td>
-                        <td>Valor</td>
-                    </tr> 
-                    <tr>
-                        <td className='text-left'>Interes por mora</td>
-                        <td>Valor</td>
-                    </tr>
-                    <tr>
-                        <td className='text-left'>Expensas A</td>
-                        <td>Valor</td>
-                    </tr>   
-                    <tr>
-                        <td className='text-left'>Expensas B</td>
-                        <td>Valor</td>
-                    </tr>  
-                    <tr>
-                        <td className='text-left'>Redondeo</td>
-                        <td>Valor</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td className='font-bold text-left'>Total a pagar</td>
-                        <td className='font-bold'>Valor</td>
+    return (
+        <div className='mx-auto w-3/4 text-center bg-gray-200 p-4 '>
+            <section className='flex justify-around w-3/4 mx-auto text-left'>
+                <p>Propietario:</p>
+                <p>UF:</p>
+                <p>Dpto:</p>            
+            </section>
+            <section className=''>            
+                <table className='w-full '>
+                    <thead className='text-left'>
+                        <tr>
+                            <th>Conceptos a pagar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className='text-left'>Saldo anterior</td>
+                            <td>Valor</td>
+                        </tr>  
+                        <tr>
+                            <td className='text-left'>Pago</td>
+                            <td>Valor</td>
+                        </tr> 
+                        <tr>
+                            <td className='text-left'>Deuda</td>
+                            <td>Valor</td>
+                        </tr> 
+                        <tr>
+                            <td className='text-left'>Interes por mora</td>
+                            <td>Valor</td>
+                        </tr>
+                        <tr>
+                            <td className='text-left'>Expensas A</td>
+                            <td>Valor</td>
+                        </tr>   
+                        <tr>
+                            <td className='text-left'>Expensas B</td>
+                            <td>Valor</td>
+                        </tr>  
+                        <tr>
+                            <td className='text-left'>Redondeo</td>
+                            <td>Valor</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td className='font-bold text-left'>Total a pagar</td>
+                            <td className='font-bold'>Valor</td>
 
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
 
-        
-    </div>
-  )
+            
+        </div>
+    )
 }
 
 export default Personalized
