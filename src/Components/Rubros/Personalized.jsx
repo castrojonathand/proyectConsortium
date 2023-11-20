@@ -2,30 +2,55 @@ import React from 'react'
 
 const Personalized = () => {
   return (
-    <div className='mx-auto w-3/4 text-center '>
+    <div className='mx-auto w-3/4 text-center bg-gray-200 p-4 '>
         <section className='flex justify-around w-3/4 mx-auto text-left'>
             <p>Propietario:</p>
             <p>UF:</p>
             <p>Dpto:</p>            
         </section>
-        <section>            
-            <table>
-                <thead>
+        <section className=''>            
+            <table className='w-full '>
+                <thead className='text-left'>
                     <tr>
                         <th>Conceptos a pagar</th>
                     </tr>
                 </thead>
-                <tbody className=' text-left'>
-                    <tr>Saldo anterior</tr>              
-                    <tr>Pago</tr>              
-                    <tr>Deuda</tr>              
-                    <tr>Interes por mora</tr>              
-                    <tr>Expensas A</tr>              
-                    <tr>Expensas B</tr>              
-                    <tr>Redondeo</tr>                         
+                <tbody>
+                    <tr>
+                        <td className='text-left'>Saldo anterior</td>
+                        <td>Valor</td>
+                    </tr>  
+                    <tr>
+                        <td className='text-left'>Pago</td>
+                        <td>Valor</td>
+                    </tr> 
+                    <tr>
+                        <td className='text-left'>Deuda</td>
+                        <td>Valor</td>
+                    </tr> 
+                    <tr>
+                        <td className='text-left'>Interes por mora</td>
+                        <td>Valor</td>
+                    </tr>
+                    <tr>
+                        <td className='text-left'>Expensas A</td>
+                        <td>Valor</td>
+                    </tr>   
+                    <tr>
+                        <td className='text-left'>Expensas B</td>
+                        <td>Valor</td>
+                    </tr>  
+                    <tr>
+                        <td className='text-left'>Redondeo</td>
+                        <td>Valor</td>
+                    </tr>
                 </tbody>
                 <tfoot>
-                    <tr className='font-bold'>Total a pagar</tr>
+                    <tr>
+                        <td className='font-bold text-left'>Total a pagar</td>
+                        <td className='font-bold'>Valor</td>
+
+                    </tr>
                 </tfoot>
             </table>
         </section>
