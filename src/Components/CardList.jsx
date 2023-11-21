@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
 import Card from './Card'
-// import { useState, useEffect } from 'react'
-// import axios from 'axios'
 import useSWR from 'swr'
+import { CircularProgress } from "@nextui-org/progress";
+// import { CircularProgress } from "@nextui-org/react";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 export const dynamicParams = true
@@ -16,7 +16,7 @@ const CardList = () => {
     console.log("ISload>>>",isLoading)
 
     if (isLoading) {
-        return <div>Cargando...</div>
+        return <CircularProgress size="lg" aria-label="Loading..." />;
     }
 
     if (error) {

@@ -8,7 +8,7 @@ const Edificio = ({params}) => {
 
     const fetchEdificio = async () => {
 
-        const edificio = (await axios.get(`http://localhost:3000/api/edificios/${params.id}`)).data
+        const edificio = (await axios.get(`/api/edificios/${params.id}`)).data
 
         setEdificio(edificio)
 

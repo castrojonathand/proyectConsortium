@@ -1,24 +1,38 @@
 "use client"
 import React from 'react'
 import ReadExcel from '@/components/ReadExcel'
-// import axios from 'axios'
-import useSWR from 'swr'
+import useSWR,{mutate} from 'swr'
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 const Difusion = () => {
 
     const { data, error , isLoading} = useSWR('/api/sendmail', fetcher)
-    const handleSendEmails = async () => {
 
-        console.log(data)
-        console.log(error)
-        console.log(isLoading) 
+    const handleSendEmails = async () => {        
 
-        if (error) {
-            return <div>Error al cargar los datos</div>
+        try {
+            const response = await fetch('/api/sendmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: 'Joni', Gmail: 'castrojonathand1989@gmail.com' }),
+            });
+
+            if (response.ok) {
+                console.log('Correo enviado correctamente.');
+                mutate('/api/sendmail'); // Vuelve a obtener los datos después de enviar el correo
+            } else {
+                console.error('Error al enviar el correo:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error en la solicitud:', error);
         }
         
     }
+    console.log(data)
+    console.log(error)
+    console.log(isLoading) 
     return (       
         <>
             <div className="flex justify-between p-2 text-center">            
