@@ -3,9 +3,10 @@ import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 
 export async function POST(request){
-    const {name,Gmail} = await request.json()  
+    const {name,Gmail,attachment} = await request.json()  
     console.log("name>>>",name)
     console.log("Gmail>>>",Gmail)
+    console.log("attachment>>",attachment)
     // console.log("mailOptions>>>",mailOptions)
     // await fs.writeFile('./promesas.txt', 'Hola mundo con promesas')
     // await fs.appendFile('./promesas.txt', 'Como estas??')
@@ -22,8 +23,10 @@ export async function POST(request){
             subject:"Prueba de envio CV adjunto",
             text:`Hola ${name}, este es un mensaje de prueba con adjunto enviado desde el servidor de nextjs`,
             attachments:{
-                path: 'C:/Users/jony/Desktop/Kaba/consortium/src/Assets/cv.pdf',
-                // href: "https://drive.google.com/file/d/1GsrPR7Mexes2Z1JKDXsUjj_Kq2irWvtV/view?usp=sharing"                   
+                
+                // path: attachment,
+                href: attachment, 
+                contentType: 'application/pdf'              
             },
         })
         console.log("envio exitoso",response)

@@ -56,7 +56,7 @@ const ReadExcel = () => {
         crearPDF()
     }
 
-    console.log("ExcelFile>>",excelData)   
+    // console.log("ExcelFile>>",excelData)   
     
     return (
         <>  
