@@ -1,8 +1,10 @@
+"use client"
+import Card2 from '@/components/Card2'
 import React from 'react'
 
 const Pendientes = () => {
     return (
-        <div>Page Pendientes</div>
+        <Card2/>
     )
 }
 export default Pendientes
