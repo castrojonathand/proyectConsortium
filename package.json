@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@nextui-org/progress": "^2.0.24",
+    "@nextui-org/react": "^2.2.9",
+    "@nextui-org/spinner": "^2.0.24",
     "axios": "1.5.1",
     "dotenv": "^16.3.1",
     "jspdf": "2.5.1",

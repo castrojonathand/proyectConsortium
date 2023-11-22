@@ -26,7 +26,8 @@ export async function POST(request){
                 
                 // path: attachment,
                 href: attachment, 
-                contentType: 'application/pdf'              
+                contentType: 'application/pdf',  
+                httpHeaders: {authorization: "bearer"}            
             },
         })
         console.log("envio exitoso",response)
