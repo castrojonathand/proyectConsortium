@@ -8,8 +8,8 @@ const transporter = createTransport(
     port: 465,
     secure: true,
     auth: {
-        user: "castrojonathand@gmail.com", // Tu dirección de correo electrónico de Gmail
-        pass: 'kguf dcun smmp yuhq' // Tu contraseña de Gmail
+        user: process.env.USER, // Tu dirección de correo electrónico de Gmail
+        pass: process.env.PASS, // Tu contraseña de Gmail
     },
 }));
 
