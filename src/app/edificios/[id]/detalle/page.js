@@ -1,6 +1,6 @@
 "use client"
-import Top from "@/components/Rubros/Top"
-import Personalized from '@/components/Rubros/Personalized'
+import Top from "../../../../components/Rubros/Top"
+import Personalized from '../../../../components/Rubros/Personalized'
 import { toast, Toaster } from "sonner"
 
 const Detalle = () => {
