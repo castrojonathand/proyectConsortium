@@ -4,10 +4,7 @@ import ReadExcel from '@/components/ReadExcel'
 import useSWR from 'swr'
 import axios from 'axios'
 
-const fetcher = url => axios.post(url,{
-    // "name":"Joni",
-    // "Gmail":"castrojonathand1989@gmail.com"
-}).then(res => res.data)
+const fetcher = url => axios.post(url).then(res => res.data)
 
 const Difusion = () => {
 
