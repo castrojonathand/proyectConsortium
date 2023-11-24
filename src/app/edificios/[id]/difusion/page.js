@@ -10,8 +10,7 @@ const Difusion = () => {
     const [Gmail, setEmail] = useState('');
 
     const handleSendEmails = async () => {
-        try {
-            // Realizar la llamada POST a la API '/api/sendmail' con los datos name y email
+        try {            
             const response = await axios.post('/api/sendmail', { name, Gmail });
             console.log('Respuesta del servidor:', response.data);
         } catch (error) {
@@ -23,10 +22,11 @@ const Difusion = () => {
             <div className="flex justify-between p-2 text-center">
                 <div className="p-2">Difusion</div>
                 <div className="flex">
-                    <label htmlFor="name" className="mr-2">
+                    <label htmlFor="name" className="mr-2 p-2">
                         Nombre:
                     </label>
                     <input
+                        className='w-48 px-2'
                         type="text"
                         id="name"
                         value={name}
@@ -34,10 +34,11 @@ const Difusion = () => {
                     />
                 </div>
                 <div className="flex">
-                    <label htmlFor="email" className="mr-2">
+                    <label htmlFor="email" className="mr-2 p-2">
                         Correo electrónico:
                     </label>
                     <input
+                        className=' w-64 px-2'
                         type="email"
                         id="email"
                         value={Gmail}
