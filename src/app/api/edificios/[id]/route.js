@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import Edificios from "@/models/Edificios";
+export const dynamicParams = true
 
 export async function GET(request,{ params }) {
 

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+export const dynamicParams = true
 export function GET({ params }) {
 
     const id  = params.id;
