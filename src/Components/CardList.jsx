@@ -2,8 +2,6 @@
 import React from 'react'
 import Card from './Card'
 import useSWR from 'swr'
-import { CircularProgress } from "@nextui-org/progress";
-// import { CircularProgress } from "@nextui-org/react";
 import axios from "axios";
 
 const fetcher = (url) => axios.get(url).then((res) => res.data);
@@ -17,21 +15,11 @@ const CardList = () => {
 
     if (isValidating) {
         return (
-            <CircularProgress
-                size="lg"
-                aria-label=" Loading... "
-                label="Cargando..."
-            />
+            <div>Validating...</div>
         );
     }
     if (isLoading) {
-        return (
-            <CircularProgress
-                size="lg"
-                aria-label=" Loading... "
-                label="Cargando..."
-            />
-        );
+        return <div>Loading...</div>;
     }
 
     if (error) {
