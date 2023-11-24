@@ -1,12 +1,11 @@
 import {transporter, mailOptions} from '@/utils/sendEmails';
 import { NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
+// import { promises as fs } from 'fs';
 
 export async function POST(request){
-    const {name,Gmail,attachment} = await request.json()  
+    const {name,Gmail} = await request.json()  
     console.log("name>>>",name)
     console.log("Gmail>>>",Gmail)
-    console.log("attachment>>",attachment)
     // console.log("mailOptions>>>",mailOptions)
     // await fs.writeFile('./promesas.txt', 'Hola mundo con promesas')
     // await fs.appendFile('./promesas.txt', 'Como estas??')
@@ -25,9 +24,8 @@ export async function POST(request){
             attachments:{
                 
                 // path: attachment,
-                href: attachment, 
-                contentType: 'application/pdf',  
-                httpHeaders: {authorization: "bearer"}            
+                path: "C:/Users/jony/Desktop/Kaba/consortium/src/assets/cv.pdf", 
+                contentType: 'application/pdf',                
             },
         })
         console.log("envio exitoso",response)
